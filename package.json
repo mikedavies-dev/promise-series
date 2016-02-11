@@ -1,5 +1,5 @@
 {
-  "name": "promise-series",
+  "name": "promise-series2",
   "version": "1.0.0",
   "description": "Add Promise.series() to EC6 promises",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "series"
   ],
   "author": "Mike Davies",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ant-fx/promise-series/issues"
   },

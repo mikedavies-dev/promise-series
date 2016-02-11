@@ -5,7 +5,7 @@ Iterate over an array in series. Execution will not move onto the next element i
 ## Examples
 
 ````javascript
-const series = require("promise-series");
+const series = require("promise-series2");
 const vals = [1,2,3,4];
 
 return series(vals, (val,ix) => {
@@ -22,7 +22,7 @@ return series(vals, (val,ix) => {
 
 ### setTimeout
 ````javascript
-const series = require("promise-series");
+const series = require("promise-series2");
 const vals = [1,2,3,4];
 
 return series(vals, (val,ix) => {
@@ -40,7 +40,7 @@ return series(vals, (val,ix) => {
 
 ### Remote request using `request-promise`
 ````javascript
-const series = require("promise-series");
+const series = require("promise-series2");
 const rp = require('request-promise');
 
 const vals = [
