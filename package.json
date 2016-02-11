@@ -1,7 +1,7 @@
 {
   "name": "promise-series2",
-  "version": "1.0.0",
-  "description": "Add Promise.series() to EC6 promises",
+  "version": "1.0.1",
+  "description": "Run promises in series",
   "main": "index.js",
   "directories": {
     "test": "test"
