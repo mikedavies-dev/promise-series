@@ -1,0 +1,26 @@
+{
+  "name": "promise-series",
+  "version": "1.0.0",
+  "description": "Add Promise.series() to EC6 promises",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ant-fx/promise-series.git"
+  },
+  "keywords": [
+    "promise",
+    "series"
+  ],
+  "author": "Mike Davies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ant-fx/promise-series/issues"
+  },
+  "homepage": "https://github.com/ant-fx/promise-series#readme"
+}
