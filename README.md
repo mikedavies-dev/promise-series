@@ -22,16 +22,14 @@ return series(vals, (val,ix) => {
 
 ````
 
-### setTimeout
+### Example using `setTimeout`
 ````javascript
 const series = require("promise-series2");
 const vals = [1,2,3,4];
 
 return series(vals, (val,ix) => {
   return new Promise((resolve,reject) => {
-    setTimeout(()=>{
-      resolve(val);
-    },1000);
+    setTimeout(()=> resolve(val),1000);
   });
 })
 .then(results => {
@@ -40,7 +38,7 @@ return series(vals, (val,ix) => {
 
 ````
 
-### Remote request using `request-promise`
+### Example using `request-promise`
 ````javascript
 const series = require("promise-series2");
 const rp = require('request-promise');
