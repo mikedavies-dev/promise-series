@@ -48,7 +48,7 @@ const vals = [
   "http://www.microsoft.com"
 ];
 
-return series(vals, val => return rp('http://www.google.com'))
+return series(vals, url => return rp(url))
   .then(results => {
     results[0]; // html for google
     results[1]; // html for microsoft
