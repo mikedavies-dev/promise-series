@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ant-fx/promise-series/issues"
   },
-  "homepage": "https://github.com/ant-fx/promise-series#readme"
+  "homepage": "https://github.com/ant-fx/promise-series#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
 }
