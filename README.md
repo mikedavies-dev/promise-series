@@ -2,6 +2,8 @@
 
 Iterate over an array in series. Execution will not move onto the next element in the array until after the current element has resolved.
 
+[![NPM](https://nodei.co/npm/promise-series2.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/promise-series2/)
+
 ## Examples
 
 ````javascript
