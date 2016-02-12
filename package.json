@@ -1,6 +1,6 @@
 {
   "name": "promise-series2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Run promises in series",
   "main": "index.js",
   "directories": {

@@ -3,7 +3,7 @@ module.exports= (arr,cb) => {
   return arr.reduce((promise,item,ix) => {
     return promise.then(() => {
 
-      const result = cb(item,ix);
+      const result = cb(item,ix,results);
 
       // if we get a promise back, evalualte and add to the results
       // otherwise just add to the results

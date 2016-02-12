@@ -92,4 +92,18 @@ describe("PromiseSeries()", function() {
       return Promise.resolve(val);
     });
   });
+
+  it("Should pass the current results to the callback", function() {
+
+    const vals = [1,2,3,4,5];
+    let index= 0;
+
+    return series(vals, (val,ix,results) => {
+
+      if (ix)
+        expect(results[ix-1]).to.equal(vals[ix-1]);
+
+      return Promise.resolve(val);
+    });
+  });
 });

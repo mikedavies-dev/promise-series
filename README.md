@@ -10,7 +10,7 @@ Iterate over an array in series. Execution will not move onto the next element i
 const series = require("promise-series2");
 const vals = [1,2,3,4];
 
-return series(vals, (val,ix) => {
+series(vals, (val,ix) => {
   return Promise.resolve(val);
 })
 .then(results => {
@@ -18,7 +18,7 @@ return series(vals, (val,ix) => {
   results[1] == vals[1];
   results[2] == vals[2];
   results[3] == vals[3];
-})
+});
 
 ````
 
@@ -27,7 +27,7 @@ return series(vals, (val,ix) => {
 const series = require("promise-series2");
 const vals = [1,2,3,4];
 
-return series(vals, (val,ix) => {
+series(vals, (val,ix) => {
   return new Promise((resolve,reject) => {
     setTimeout(()=> resolve(val),1000);
   });
@@ -48,10 +48,33 @@ const vals = [
   "http://www.microsoft.com"
 ];
 
-return series(vals, url => return rp(url))
+series(vals, url => return rp(url))
   .then(results => {
     results[0]; // html for google
     results[1]; // html for microsoft
   });
+
+````
+
+### Access to current results set
+
+````javascript
+const series = require("promise-series2");
+const vals = [1,2,3,4];
+
+series(vals, (val,ix,results) => {
+
+  // access previous results if required
+  if (ix)
+    results[ix-1] == vals[ix-1]; // true
+
+  return Promise.resolve(val);
+})
+.then(results => {
+  results[0] == vals[0];
+  results[1] == vals[1];
+  results[2] == vals[2];
+  results[3] == vals[3];
+});
 
 ````
