@@ -106,4 +106,14 @@ describe("PromiseSeries()", function() {
       return Promise.resolve(val);
     });
   });
+
+  it("Should handle a result that looks like a promise but is not", function() {
+
+    return series([0], (val,ix,results) => {
+      return {
+        then: 1
+      };
+    })
+    .then(res => expect(res[0].then).to.equal(1));
+  });
 });
